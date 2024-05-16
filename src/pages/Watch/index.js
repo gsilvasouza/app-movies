@@ -4,13 +4,18 @@ import Header from '../../components/Header'
 import styles from './Watch.module.css'
 import { useParams } from 'react-router-dom'
 import videos from '../../json/videos.json'
+import PageNotFound from '../PageNotFound'
 
 function Watch(){
   const params = useParams();
   const video = videos.find((video) => {
     return video.id === params.id
   })
-  console.log(video)
+
+  if(!video){
+    return <PageNotFound />
+  }
+
   return (
     <>
       <Header />
@@ -30,4 +35,4 @@ function Watch(){
   )
 }
 
-export default Watch
+export default Watch;

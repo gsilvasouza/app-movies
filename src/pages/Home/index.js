@@ -21,7 +21,7 @@ function Home() {
               )
             }
           </Category>)
-        }
+        } 
       </Container>
       <Footer/>
     </>
