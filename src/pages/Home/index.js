@@ -5,6 +5,7 @@ import Container from '../../components/Container'
 import Card from '../../components/Card';
 /*importando a função e constante de outro arquivo*/
 import Category, {categories, filterCategory} from '../../components/Category';
+import Carousel from '../../components/Carousel';
 
 function Home() {
   return (
@@ -15,11 +16,13 @@ function Home() {
         {
           categories.map((category,index) =>
           <Category category = {category}>
-            {
-              filterCategory(index).map((video) => 
-                <Card id={video.id} key={video.id}/>
-              )
-            }
+            <Carousel>
+              {
+                filterCategory(index).map((video) => 
+                  <Card id={video.id} key={video.id}/>
+                )
+              }
+            </Carousel>
           </Category>)
         } 
       </Container>
