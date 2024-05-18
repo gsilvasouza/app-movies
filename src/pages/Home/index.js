@@ -6,6 +6,7 @@ import Card from '../../components/Card';
 /*importando a função e constante de outro arquivo*/
 import Category, {categories, filterCategory} from '../../components/Category';
 import Carousel from '../../components/Carousel';
+import ScrollToTop from '../../components/ScrollToTop';
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
           </Category>)
         } 
       </Container>
+      <ScrollToTop />
       <Footer/>
     </>
   );

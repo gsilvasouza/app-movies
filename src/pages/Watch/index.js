@@ -5,6 +5,7 @@ import styles from './Watch.module.css'
 import { useParams } from 'react-router-dom'
 import videos from '../../json/videos.json'
 import PageNotFound from '../PageNotFound'
+import ScrollToTop from '../../components/ScrollToTop';
 
 function Watch(){
   const params = useParams();
@@ -30,6 +31,7 @@ function Watch(){
         ></iframe>
         </section>
       </Container>
+      <ScrollToTop />
       <Footer/>
     </>
   )

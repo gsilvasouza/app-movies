@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Container from '../../components/Container'
 import Footer from '../../components/Footer'
 import VideoList from '../../components/VideoList'
+import ScrollToTop from '../../components/ScrollToTop';
 import { useFavoriteContext } from '../../context/Favorites'
 
 function Favorites(){
@@ -17,6 +18,7 @@ function Favorites(){
           { <VideoList videos={favorite} emptyHanding="Sem favoritos"/>}
         </section> 
       </Container>
+      <ScrollToTop/>
       <Footer />
     </>
   )
